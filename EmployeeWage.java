@@ -81,7 +81,36 @@ int hrworked='8';{
 		  break;
    }
 	   }
+//uc5
+int wagePerHour = 20;
+int fullDayHours = 8;
+int partTimeHours = 4; // Assuming part-time work is for 4 hours
+int workingDaysPerMonth = 20;
+
+String employeetype1 = "fulltime"; // Change to "part-time" as needed
+
+int totalWage = 0;{
+
+switch (employeetype1) {
+    case"fulltime":
+        for (int i = 0; i < workingDaysPerMonth; i++) {
+            totalWage += wagePerHour * fullDayHours;
+        }
+        System.out.println("Full-time employee's monthly wage: rs" + totalWage);
+        break;
+    case"parttime":
+        for (int i = 0; i < workingDaysPerMonth; i++) {
+            totalWage += wagePerHour * partTimeHours;
+        }
+        System.out.println("Part-time employee's monthly wage: rs" + totalWage);
+        break;
+    default:
+        System.out.println("Invalid employee type..");
+        break;
+}
+
 	   
+}
 }
 
 
