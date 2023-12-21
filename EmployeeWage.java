@@ -15,6 +15,20 @@ public class EmployeeWage {
 		else {
 		
 		System.out.println("employee is absent");
+		}
+		
+		int wageperhr=20;
+		int fulldayhr=8;
+		int randomdailywage;
+		
+		if(fulldayhr==8) {
+			randomdailywage=wageperhr+fulldayhr;
+			System.out.println("employee daily wage is: Rs  "+randomdailywage);
+			
+		}
+		else {
+		
+		System.out.println("invalid");
 	}
 	}
-}
+	}
