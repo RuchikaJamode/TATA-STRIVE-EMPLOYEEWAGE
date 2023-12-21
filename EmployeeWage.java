@@ -1,5 +1,6 @@
 package com.bridgelabz.employeewage;
 import java.util.Random;
+import java.util.Scanner;
 public class EmployeeWage {
 
 	public static void main(String[] args) {
@@ -16,6 +17,7 @@ public class EmployeeWage {
 		
 		System.out.println("employee is absent");
 		}
+		//UC2
 		
 		int wageperhr=20;
 		int fulldayhr=8;
@@ -30,6 +32,7 @@ public class EmployeeWage {
 		
 		System.out.println("invalid");
 	}
+		//UC3
 		int fullTimeHours = 8;
         int partTimeHours = 4; // Assuming part-time work is 4 hours
 
@@ -47,7 +50,40 @@ public class EmployeeWage {
     public static int calculateDailyWage(int hoursWorked, int wagePerHour) {
         return hoursWorked * wagePerHour;
     }
+    //program UC4
+   
+String employeetype="fulltime";
+int wageperHour=20;
+int fulldayhr=8;
+int hrworked='8';{
+
+   switch(employeetype) {
+   case"fulltime":
+	   if(hrworked==fulldayhr) {
+		   int fulltimedailywage=wageperHour+hrworked;
+		   System.out.println("fulltime daily wage=Rs  "+fulltimedailywage);
+	   }
+	   else {
+		   System.out.println("fulltime worked 8 hrs wage=Rs  ");
+	   }
+	   break;
+   case"parttime":
+	   if(hrworked==fulldayhr) {
+		   int parttimedailywage=wageperHour+hrworked;
+		   System.out.println("parttime daily wage=Rs  "+parttimedailywage);
+	   }
+	   else {
+		   System.out.println("parttime worked 8 hrs wage=Rs  ");
+	   }
+	   break;
+	  default:
+		  System.out.println("invalid.");
+		  break;
+   }
+	   }
+	   
+}
 
 
-	}
+
 	
