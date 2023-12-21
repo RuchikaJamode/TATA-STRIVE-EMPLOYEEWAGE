@@ -80,7 +80,7 @@ int hrworked='8';{
 		  System.out.println("invalid.");
 		  break;
    }
-	   }
+	   
 //uc5
 int wagePerHour = 20;
 int fullDayHours = 8;
@@ -108,7 +108,59 @@ switch (employeetype1) {
         System.out.println("Invalid employee type..");
         break;
 }
+//UC6
+int wagePerHour1 = 20;
+int fullDayHours1 = 8;
+int partTimeHours1 = 4; // Assuming part-time work is 4 hours
 
+int totalWorkingDays = 20;
+int maxWorkingHours = 100;
+
+int totalHoursWorked = 0;
+int totalDaysWorked = 0;
+int totalWage1 = 0;
+
+while (totalHoursWorked < maxWorkingHours && totalDaysWorked < totalWorkingDays) {
+    int remainingHours = maxWorkingHours - totalHoursWorked;
+    int remainingDays = totalWorkingDays - totalDaysWorked;
+
+    switch (totalHoursWorked < maxWorkingHours && totalDaysWorked < totalWorkingDays ? "continue" : "stop") {
+        case "continue":
+            int dailyWage = 0;
+
+            // Check if it's a full-time or part-time day
+            if (totalHoursWorked % fullDayHours1 == 0) {
+                if (remainingHours >= fullDayHours1) {
+                    dailyWage = wagePerHour1 * fullDayHours1;
+                    totalHoursWorked += fullDayHours1;
+                } else {
+                    dailyWage = wagePerHour1 * remainingHours;
+                    totalHoursWorked += remainingHours;
+                }
+            } else {
+                if (remainingHours >= partTimeHours1) {
+                    dailyWage = wagePerHour1 * partTimeHours1;
+                    totalHoursWorked += partTimeHours1;
+                } else {
+                    dailyWage = wagePerHour1 * remainingHours;
+                    totalHoursWorked += remainingHours;
+                }
+            }
+
+            totalDaysWorked++;
+            totalWage1 += dailyWage;
+
+            System.out.println("Day " + totalDaysWorked + ": Wage - $" + dailyWage);
+            break;
+        case "stop":
+            break;
+        default:
+            break;
+    }
+}
+
+System.out.println("\nTotal wage for " + totalDaysWorked + " days worked and " + totalHoursWorked + " hours worked: $" + totalWage1);
+}
 	   
 }
 }
